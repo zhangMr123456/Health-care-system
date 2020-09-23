@@ -126,7 +126,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/statistics-report',
           title: '报表统计工作站'
         }
       ]
