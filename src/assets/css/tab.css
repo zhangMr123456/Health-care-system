@@ -132,3 +132,58 @@
 .integrated-presentation-of-medical-records .grid-con-icon {
     background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
 }
+
+.pathological-examination .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/medical-record-examination.png");
+}
+
+.implement-monitoring .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/time-limit-monitoring.png");
+}
+
+.medical-record-quality-control-settings .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.statistics-of-scoring-quantity .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.case-scoring-and-filing .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/scoring-and-filing-of-medical-records.png");
+}
+
+.hospitalized-patients .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/Hospitalized-patients.png");
+}
+
+.car-critical .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/ar-critical.png");
+}
+
+.car-operation .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/operation.png");
+}
+
+.car-death .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/discharged-from-hospital.png");
+}
+
+.discharged-from-hospital .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/discharged-from-hospital.png");
+}
+
+.car-other .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/other.png");
+
+}
+
+.templateQualityControl .grid-con-icon {
+    background-image: url("../img/medical_record_quality_control_workstation/template-quality-control.png");
+
+}
+
+.small-template-quality-control .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+
+}

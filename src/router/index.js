@@ -71,8 +71,8 @@ export default new Router({
                 },
                 {
                     // 拖拽Dialog组件
-                    path: '/dialog',
-                    component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/DragDialog.vue'),
+                    path: '/medicalRecordQualityControlWorkstation',
+                    component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/medical_quality_management_system/MedicalRecordQualityControlWorkstation.vue'),
                     meta: {title: '拖拽弹框'}
                 },
                 {

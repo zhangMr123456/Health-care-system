@@ -113,7 +113,6 @@ export default {
     //根据方法名调用方法
     linkToDataInput(methods) {
       this.visible = true;
-      this.$options.methods[methods]();
     },
 
     //在院患者

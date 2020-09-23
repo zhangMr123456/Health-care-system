@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     linkToDataInput(methods) {
-      this.$options.methods[methods]();
+      this.visible = true;
     },
     //院内会诊工作站
     hospitalConsultation() {

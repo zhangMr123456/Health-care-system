@@ -90,7 +90,8 @@ export default {
   },
   methods: {
     linkToDataInput(methods) {
-      this.$options.methods[methods]();
+      this.visible = true;
+      // this.$options.methods[methods]();
     },
     handleRead(index) {
       const item = this.unread.splice(index, 1);
