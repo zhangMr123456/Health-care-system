@@ -30,9 +30,9 @@ export default new Router({
                     meta: { title: '基础表格' }
                 },
                 {
-                    path: '/tabs',
-                    component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
-                    meta: { title: 'tab选项卡' }
+                    path: '/inpatientMedicalWorkstation',
+                    component: () => import(/* webpackChunkName: "tabs" */ '../components/page/inpatient_medical_workstation/InpatientMedicalWorkstation.vue'),
+                    meta: { title: '住院医护工作站' }
                 },
                 {
                     path: '/form',

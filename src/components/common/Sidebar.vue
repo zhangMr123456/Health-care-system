@@ -71,7 +71,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-copy',
-          index: 'tabs',
+          index: 'inpatientMedicalWorkstation',
           title: '住院医护工作站'
         },
         {
