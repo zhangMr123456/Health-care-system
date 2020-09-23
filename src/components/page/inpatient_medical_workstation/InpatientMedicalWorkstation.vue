@@ -5,7 +5,7 @@
     <el-row :gutter="40" v-for="item in items">
       <el-col :span="7" v-for="cont in item">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content" :class="cont.style" v-on:click="inpatient">
+          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.onclick)">
             <i class="grid-con-icon"></i>
             <div class="grid-cont-right">
               <div class="title grid-num ">{{ cont.title }}</div>
@@ -15,7 +15,12 @@
         </el-card>
       </el-col>
     </el-row>
+
+    <el-dialog v-dialogDrag title=dialogName center :visible.sync="visible" width="30%">
+
+    </el-dialog>
   </div>
+
 </template>
 
 <script>
@@ -25,6 +30,8 @@ export default {
   name: 'inpatientMedicalWorkstation',
   data() {
     return {
+      visible: false,
+      dialogName: "拖拽弹框",
       items: [[
         {
           style: "grid-con",
@@ -103,9 +110,15 @@ export default {
     };
   },
   methods: {
+    //根据方法名调用方法
+    linkToDataInput(methods) {
+      this.visible = true;
+      this.$options.methods[methods]();
+    },
+
     //在院患者
     inpatient() {
-      
+      console.log("在院患者被单击")
     },
 
     //结构化检索

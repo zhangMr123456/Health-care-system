@@ -76,7 +76,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-calendar',
-          index: '3',
+          index: 'hospitalConsultationWorkstation',
           title: '院内会诊工作站'
         },
         {
