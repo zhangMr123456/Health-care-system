@@ -111,22 +111,22 @@ export default {
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/test2',
           title: '医学资料库'
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/test3',
           title: '系统维护'
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/test4',
           title: '医疗质量管理系统'
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/donate1',
           title: '报表统计工作站'
         }
       ]

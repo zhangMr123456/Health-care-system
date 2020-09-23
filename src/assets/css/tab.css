@@ -1,0 +1,89 @@
+/*卡片标题*/
+.grid-num {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*卡片整体*/
+.grid-cont-right {
+    flex: 1;
+    text-align: left;
+    font-size: 14px;
+    color: #999;
+}
+
+/*卡片背景颜色*/
+.inpatient-medical-workstation .el-card {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/*卡片*/
+.grid-content {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+
+.title {
+    color: #68BC6E;
+    border-bottom: #68BC6E solid 2px;
+}
+
+.el-row {
+    margin-top: 10px;
+}
+
+.grid-con .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/inpatient.png");
+}
+
+.grid-con-1 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/structured-retrieval.png");
+}
+
+.grid-con-2 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/patients-to-be-transferred.png");
+}
+
+.grid-con-3 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/patient-to-be-transferred-out.png");
+
+}
+
+.grid-con-4 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/medical-record-borrowing.png");
+
+}
+
+.grid-con-5 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/entrusted-signature.png");
+}
+
+.grid-con-6 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/departments-share-medical-records.png");
+}
+
+.grid-con-7 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/Case-Recycle-Bin.png");
+}
+
+.grid-con-8 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/Patient-inquiry.png");
+}
+
+.grid-con-9 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.grid-con-10 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.grid-con-11 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.grid-con-12 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}

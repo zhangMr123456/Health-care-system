@@ -38,6 +38,8 @@ export default {
     vTags
 
   },
+
+
   created() {
     bus.$on('collapse-content', msg => {
       this.collapse = msg;
@@ -54,3 +56,19 @@ export default {
   }
 };
 </script>
+
+<style>
+.grid-con-icon {
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+</style>

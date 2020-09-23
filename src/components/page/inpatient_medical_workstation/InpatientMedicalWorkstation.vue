@@ -1,185 +1,163 @@
 <template>
+
   <div class="inpatient-medical-workstation">
-    <el-row :gutter="40">
-      <el-col :span="8">
+    <!--    <div v-on:click="inpatient">test</div>-->
+    <el-row :gutter="40" v-for="item in items">
+      <el-col :span="7" v-for="cont in item">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
+          <div class="grid-content" :class="cont.style" v-on:click="inpatient">
+            <i class="grid-con-icon"></i>
             <div class="grid-cont-right">
-              <div class="title grid-num ">在院患者</div>
-              <div>病例文书的书写、患者转科等操作</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">结构化检索</div>
-              <div>查询患者信息及病例内容</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-
-    </el-row>
-    <el-row :gutter="40">
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">待转出患者</div>
-              <div>已经进行转科操作的患者</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">待转入患者</div>
-              <div>由其他科室转入本科室的患者</div>
+              <div class="title grid-num ">{{ cont.title }}</div>
+              <div>{{ cont.content }}</div>
             </div>
           </div>
         </el-card>
       </el-col>
     </el-row>
-    <el-row :gutter="40">
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">病例借阅</div>
-              <div>借阅已经归档的患者病例</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">委托签字</div>
-              <div>签字权委托于其他医生</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row :gutter="40">
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">科室共享病例</div>
-              <div>其他科室共享病例</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row :gutter="40">
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row :gutter="40">
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row :gutter="40">
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="8">
-        <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content grid-con-1">
-            <i class="el-icon-lx-people grid-con-icon"></i>
-            <div class="grid-cont-right">
-              <div class="title grid-num ">1234</div>
-              <div>急需书写文档</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-
   </div>
 </template>
 
 <script>
+import '@/assets/css/tab.css';
+
 export default {
   name: 'inpatientMedicalWorkstation',
   data() {
-    return {};
+    return {
+      items: [[
+        {
+          style: "grid-con",
+          title: "在院患者",
+          content: "病例文书的书写、患者转科等操作",
+          onclick: "inpatient"
+        }, {
+          style: "grid-con-1",
+          title: "结构化检索",
+          content: "查询患者信息及病例内容",
+          onclick: "structuredRetrieval"
+        }
+      ], [{
+        style: "grid-con-2",
+        title: "待转出患者",
+        content: "已经进行转科操作的患者",
+        onclick: "patientToBeTransferredOut"
+      }, {
+        style: "grid-con-3",
+        title: "待转入患者",
+        content: "由其他科室转入本科室的患者",
+        onclick: "patientsToBeTransferred"
+      }], [
+        {
+          style: "grid-con-4",
+          title: "病例借阅",
+          content: "借阅已经归档的患者病例",
+          onclick: "medicalRecordBorrowing"
+        }, {
+          style: "grid-con-5",
+          title: "委托签字",
+          content: "签字权委托于其他医生",
+          onclick: "entrustedSignature"
+        }
+      ], [{
+        style: "grid-con-6",
+        title: "科室共享病例",
+        content: "其他科室共享病例",
+        onclick: "departmentsShareCases"
+      }, {
+        style: "grid-con-7",
+        title: "病例回收站",
+        content: "保存已经删除的病例",
+        onclick: "caseRecycleBin"
+      }], [
+        {
+          style: "grid-con-8",
+          title: "患者查询",
+          content: "对在医院和归档者进行查询",
+          onclick: "patientInquiry"
+        },
+        {
+          style: "grid-con-9",
+          title: "科室非计划手术统计",
+          content: "科室非计划手术统计",
+          onclick: "departmentUnplannedOperationStatistics"
+        }
+      ], [{
+        style: "grid-con-10",
+        title: "签名查询",
+        content: "对电子签名病例查询，验证",
+        onclick: "signatureQuery"
+      }, {
+        style: "grid-con-11",
+        title: "护理排班",
+        content: "护理部排班程序",
+        onclick: "nursingScheduling"
+      }], [
+        {
+          style: "grid-con-12",
+          title: "远程会诊医疗",
+          content: "河南省远程医疗协同服务平台",
+          onclick: "teleconsultationMedicalTreatment"
+        }
+      ],]
+    };
   },
   methods: {
+    //在院患者
+    inpatient() {
+      
+    },
+
+    //结构化检索
+    structuredRetrieval() {
+
+    },
+
+
+    //待转出患者
+    patientToBeTransferredOut() {
+
+    },
+    //待转入患者
+    patientsToBeTransferred() {
+
+    },
+    //病例借阅
+    medicalRecordBorrowing() {
+    },
+    //委托签字
+    entrustedSignature() {
+
+    },
+
+    //科室共享病例
+    departmentsShareCases() {
+
+    },
+    //病例回收站
+    caseRecycleBin() {
+
+    },
+    //患者查询
+    patientInquiry() {
+
+    },
+    //科室非计划手术统计
+    departmentUnplannedOperationStatistics() {
+
+    },
+    //签名查询
+    signatureQuery() {
+
+    },
+    //护理排班
+    nursingScheduling() {
+
+    },
+    //远程会诊医疗
+    teleconsultationMedicalTreatment() {
+
+    },
     handleRead(index) {
       const item = this.unread.splice(index, 1);
       console.log(item);
@@ -204,84 +182,7 @@ export default {
 </script>
 
 <style>
-.message-title {
-  cursor: pointer;
-}
 
-.handle-row {
-  margin-top: 20px;
-}
-
-.inpatient-medical-workstation .el-card {
-  background-color: rgba(255, 255, 255, 0);
-}
-
-
-.grid-content {
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-
-.grid-cont-right {
-  flex: 1;
-  text-align: left;
-  font-size: 14px;
-  color: #999;
-}
-
-.grid-num {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.grid-con-icon {
-  font-size: 50px;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-}
-
-.grid-con-1 .grid-con-icon {
-  color: rgb(242, 94, 67);
-}
-
-.grid-con-1 .grid-num {
-
-}
-
-.grid-con-2 .grid-con-icon {
-}
-
-.grid-con-2 .grid-num {
-}
-
-.grid-con-3 .grid-con-icon {
-}
-
-.grid-con-3 .grid-num {
-
-}
-
-.user-info-cont div:first-child {
-  font-size: 30px;
-  color: #222;
-}
-
-.user-info-list span {
-  margin-left: 70px;
-}
-
-.title {
-  color: #68BC6E;
-  border-bottom: #68BC6E solid 2px;
-}
-
-.el-row {
-  margin-top: 10px;
-}
 
 </style>
 
