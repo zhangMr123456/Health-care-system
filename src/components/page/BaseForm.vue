@@ -146,6 +146,9 @@ export default {
     created() {
         
     },
+    components:{
+
+    },
     methods: {
         onSubmit() {
             this.$message.success('提交成功！');
