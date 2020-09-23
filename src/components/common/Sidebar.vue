@@ -101,7 +101,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-warn',
-          index: '7',
+          index: 'medicalRecordLending',
           title: '病案借阅'
         },
         {

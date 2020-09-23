@@ -65,9 +65,9 @@ export default new Router({
                 },
                 {
                     // 拖拽列表组件
-                    path: '/drag',
-                    component: () => import(/* webpackChunkName: "drag" */ '../components/page/DragList.vue'),
-                    meta: {title: '拖拽列表'}
+                    path: '/medicalRecordLending',
+                    component: () => import(/* webpackChunkName: "drag" */ '../components/page/medical_record_lending/MedicalRecordLending.vue'),
+                    meta: {title: '病案借阅'}
                 },
                 {
                     // 拖拽Dialog组件
