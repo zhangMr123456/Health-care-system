@@ -38,6 +38,8 @@ export default {
     vTags
 
   },
+
+
   created() {
     bus.$on('collapse-content', msg => {
       this.collapse = msg;
@@ -54,3 +56,10 @@ export default {
   }
 };
 </script>
+
+<style>
+
+
+
+
+</style>

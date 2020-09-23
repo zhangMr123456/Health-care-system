@@ -30,14 +30,14 @@ export default new Router({
                     meta: { title: '基础表格' }
                 },
                 {
-                    path: '/tabs',
-                    component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
-                    meta: { title: 'tab选项卡' }
+                    path: '/inpatientMedicalWorkstation',
+                    component: () => import(/* webpackChunkName: "tabs" */ '../components/page/inpatient_medical_workstation/InpatientMedicalWorkstation.vue'),
+                    meta: {title: '住院医护工作站'}
                 },
                 {
-                    path: '/form',
-                    component: () => import(/* webpackChunkName: "form" */ '../components/page/BaseForm.vue'),
-                    meta: { title: '基本表单' }
+                    path: '/hospitalConsultationWorkstation',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/hospital_consultation/HospitalConsultationWorkstation.vue'),
+                    meta: {title: '院内会诊工作站'}
                 },
                 {
                     // 富文本编辑器组件
@@ -65,9 +65,9 @@ export default new Router({
                 },
                 {
                     // 拖拽列表组件
-                    path: '/drag',
-                    component: () => import(/* webpackChunkName: "drag" */ '../components/page/DragList.vue'),
-                    meta: { title: '拖拽列表' }
+                    path: '/medicalRecordLending',
+                    component: () => import(/* webpackChunkName: "drag" */ '../components/page/medical_record_lending/MedicalRecordLending.vue'),
+                    meta: {title: '病案借阅'}
                 },
                 {
                     // 拖拽Dialog组件

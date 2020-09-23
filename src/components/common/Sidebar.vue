@@ -71,12 +71,12 @@ export default {
         },
         {
           icon: 'el-icon-lx-copy',
-          index: 'tabs',
+          index: 'inpatientMedicalWorkstation',
           title: '住院医护工作站'
         },
         {
           icon: 'el-icon-lx-calendar',
-          index: '3',
+          index: 'hospitalConsultationWorkstation',
           title: '院内会诊工作站'
         },
         {
@@ -101,7 +101,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-warn',
-          index: '7',
+          index: 'medicalRecordLending',
           title: '病案借阅'
         },
         {
@@ -111,17 +111,17 @@ export default {
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/test2',
           title: '医学资料库'
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/test3',
           title: '系统维护'
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/donate',
+          index: '/test4',
           title: '医疗质量管理系统'
         },
         {
