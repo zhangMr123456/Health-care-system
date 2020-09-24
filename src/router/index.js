@@ -111,12 +111,12 @@ export default new Router({
                         import ( /* webpackChunkName: "403" */ '../components/page/403.vue'),
                     meta: { title: '403' }
                 },
-                {
-                    path: '/statistics-report',
-                    component: () =>
-                        import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/statistics_report.vue'),
-                    meta: { title: '报表统计工作站' }
-                }
+                // {
+                //     path: '/statistics-report',
+                //     component: () =>
+                //         import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/statistics_report.vue'),
+                //     meta: { title: '报表统计工作站' }
+                // }
             ]
         },
         {

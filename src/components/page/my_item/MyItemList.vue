@@ -186,13 +186,13 @@
         </div>
     </div>
 </template>
-
+require('../../../assets/img/待提交文档.png')
 <script>
 export default {
     data() {
         return {
             activeName: 'messagequality',
-            srcmesslist: 'static/img/待提交文档.png',
+            srcmesslist: require('../../../assets/img/my_item/待提交文档.png'),
             srcmesshandle: 'static/img/质控已确认.png',
             srcmedicaltrack: '/static/img/护理排班.png',
             srcwrite: '/static/img/急需书写文档.png',
