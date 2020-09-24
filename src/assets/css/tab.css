@@ -1,3 +1,15 @@
+
+.grid-con-icon {
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /*卡片标题*/
 .grid-num {
     font-size: 18px;
@@ -85,5 +97,38 @@
 }
 
 .grid-con-12 .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.approve-medical-record-inquiry-application .grid-con-icon {
+    background-image: url("../img/medical_record_lending/approve-medical-record-inquiry-application.png");
+}
+
+
+.medical-record-browsing .grid-con-icon {
+    background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
+
+.medical-record-collection .grid-con-icon {
+    background-image: url("../img/medical_record_lending/medical-record-collection.png");
+}
+
+.follow-up-of-medical-records .grid-con-icon {
+    background-image: url("../img/medical_record_lending/follow-up-of-medical-records.png");
+}
+
+.unreceived-medical-records .grid-con-icon {
+    background-image: url("../img/medical_record_lending/unreceived-medical-records.png");
+}
+
+.event-report .grid-con-icon {
+    background-image: url("../img/medical_record_lending/event-report.png");
+}
+
+.medical-record-editor .grid-con-icon {
+    background-image: url("../img/medical_record_lending/medical-record-editor.png");
+}
+
+.integrated-presentation-of-medical-records .grid-con-icon {
     background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
 }

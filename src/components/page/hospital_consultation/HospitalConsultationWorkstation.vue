@@ -37,7 +37,7 @@ export default {
           title: "院内会诊工作站",
           content: "院内会诊工作站",
           onclick: "hospitalConsultation"
-        }
+        },
       ]]
     };
   },
