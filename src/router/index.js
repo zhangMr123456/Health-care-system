@@ -12,7 +12,7 @@ export default new Router({
         {
             path: '/',
             component: () =>
-                import ( /* webpackChunkName: "dashboard" */ '../components/page/my_patients/MyPatients.vue'),
+                import ( /* webpackChunkName: "dashboard" */ '../components/common/Home'),
             meta: {title: '我的患者'},
             children: [{
                 path: '/MyPatients',
