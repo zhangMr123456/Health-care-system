@@ -186,36 +186,36 @@
         </div>
     </div>
 </template>
-require('../../../assets/img/待提交文档.png')
+
 <script>
 export default {
     data() {
         return {
             activeName: 'messagequality',
             srcmesslist: require('../../../assets/img/my_item/待提交文档.png'),
-            srcmesshandle: 'static/img/质控已确认.png',
-            srcmedicaltrack: '/static/img/护理排班.png',
-            srcwrite: '/static/img/急需书写文档.png',
-            srcwait: 'static/img/待提交文档.png',
-            srcsign: '/static/img/待签字文档.png',
-            srcmysign: '/static/img/护理排班.png',
-            srcnurs: 'static/img/待提交文档.png',
-            srchosreg: '/static/img/病历已提交.png',
-            srcinvit: '/static/img/应邀会诊.png',
-            srcapplycon: '/static/img/会诊科室申请.png',
-            srcwaitinto: '/static/img/待转入患者.png',
-            srcwaitout: '/static/img/待转出患者.png',
-            srcsubmedi: '/static/img/病历已提交.png',
-            srcapprovaladopt: '/static/img/病历已通过审批.png',
-            srcapprovalfail: '/static/img/病历未通过审批.png',
-            srcrescue: '/static/img/护理排班.png',
-            srccritical: '/static/img/护理排班.png',
-            srcentrust: '/static/img/委托签字.png',
-            srcchange: '/static/img/交接班.png',
-            src30: '/static/img/30天未出院患者.png',
-            srctelfol: '/static/img/知识采集库.png',
-            srctelfolcen: '/static/img/知识采集库.png',
-            srcoutmed: '/static/img/护理排班.png'
+            srcmesshandle:require('../../../assets/img/my_item/质控已确认.png'),
+            srcmedicaltrack:require('../../../assets/img/my_item/护理排班.png'),
+            srcwrite:require('../../../assets/img/my_item/急需书写文档.png'),
+            srcwait: require('../../../assets/img/my_item/待提交文档.png'),
+            srcsign:require('../../../assets/img/my_item/待签字文档.png'), 
+            srcmysign:require('../../../assets/img/my_item/护理排班.png'), 
+            srcnurs:require('../../../assets/img/my_item/待提交文档.png'), 
+            srchosreg:require('../../../assets/img/my_item/病历已提交.png'), 
+            srcinvit:require('../../../assets/img/my_item/应邀会诊.png'), 
+            srcapplycon:require('../../../assets/img/my_item/会诊科室申请.png'), 
+            srcwaitinto:require('../../../assets/img/my_item/待转入患者.png'), 
+            srcwaitout:require('../../../assets/img/my_item/待转出患者.png'), 
+            srcsubmedi:require('../../../assets/img/my_item/病历已提交.png'), 
+            srcapprovaladopt:require('../../../assets/img/my_item/病历已通过审批.png'), 
+            srcapprovalfail:require('../../../assets/img/my_item/病历未通过审批.png'), 
+            srcrescue:require('../../../assets/img/my_item/护理排班.png'), 
+            srccritical:require('../../../assets/img/my_item/护理排班.png'), 
+            srcentrust:require('../../../assets/img/my_item/委托签字.png'), 
+            srcchange:require('../../../assets/img/my_item/交接班.png'), 
+            src30:require('../../../assets/img/my_item/30天未出院患者.png'), 
+            srctelfol:require('../../../assets/img/my_item/知识采集库.png'), 
+            srctelfolcen:require('../../../assets/img/my_item/知识采集库.png'), 
+            srcoutmed:require('../../../assets/img/my_item/护理排班.png')
         };
     },
     methods: {
