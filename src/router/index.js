@@ -72,35 +72,46 @@ export default new Router({
                 {
                     // 拖拽Dialog组件
                     path: '/medicalRecordQualityControlWorkstation',
-                    component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/medical_quality_management_system/MedicalRecordQualityControlWorkstation.vue'),
+                    component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/hospital_medical_record_quality_control/MedicalRecordQualityControlWorkstation.vue'),
+                    meta: {title: '病例质控工作站'}
+                },
+                {
+                    // 医疗质量管理系统
+                    path: '/medicalQualityManagementSystem',
+                    component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/medical_quality_management_system/MedicalQualityManagementSystem.vue'),
                     meta: {title: '拖拽弹框'}
                 },
                 {
                     // 国际化组件
                     path: '/i18n',
                     component: () => import(/* webpackChunkName: "i18n" */ '../components/page/I18n.vue'),
-                    meta: { title: '国际化' }
+                    meta: {title: '国际化'}
                 },
                 {
                     // 权限页面
                     path: '/permission',
                     component: () => import(/* webpackChunkName: "permission" */ '../components/page/Permission.vue'),
-                    meta: { title: '权限测试', permission: true }
+                    meta: {title: '权限测试', permission: true}
                 },
                 {
                     path: '/404',
                     component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),
-                    meta: { title: '404' }
+                    meta: {title: '404'}
                 },
                 {
                     path: '/403',
                     component: () => import(/* webpackChunkName: "403" */ '../components/page/403.vue'),
-                    meta: { title: '403' }
+                    meta: {title: '403'}
                 },
                 {
                     path: '/statistics-report',
-                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/statistics_report.vue'),
-                    meta: { title: '报表统计工作站' }
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/ReportStatistics.vue'),
+                    meta: {title: '报表统计工作站'}
+                },
+                {
+                    path: '/systemMaintenance',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/system_maintenance/SystemMaintenance.vue'),
+                    meta: {title: '系统维护'}
                 }
             ]
         },

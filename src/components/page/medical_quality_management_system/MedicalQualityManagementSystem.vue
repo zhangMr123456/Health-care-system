@@ -33,60 +33,119 @@ export default {
       items: [[
         {
           style: "approve-medical-record-inquiry-application",
-          title: "批准病历查询申请",
-          content: "查询归档病历的申请进行批准",
+          title: "组织架构图",
+          content: "组织架构图",
           onclick: "approveMedicalRecordInquiryApplication"
         }, {
           style: "grid-con-1",
-          title: "结构化检索",
-          content: "查询患者信息及病例内容",
+          title: "非计划性再次手术",
+          content: "非计划性再次手术",
           onclick: "structuredRetrieval"
         }
       ], [
         {
           style: "medical-record-browsing",
-          title: "病案浏览",
-          content: "浏览个科室病历",
+          title: "交接班管理",
+          content: "交接班管理",
           onclick: "medicalRecordBrowsing"
         }, {
           style: "medical-record-collection",
-          title: "病历代收",
-          content: "对即将归档的病历代收集中提交",
+          title: "规范诊断管理",
+          content: "规范诊断管理",
           onclick: "medicalRecordCollection"
         }
       ], [
         {
           style: "follow-up-of-medical-records",
-          title: "病案随访",
-          content: "对出院病人病案随访",
+          title: "危机值管理",
+          content: "危机值管理",
           onclick: "followUpOfMedicalRecords"
         }, {
           style: "unreceived-medical-records",
-          title: "未收病历",
-          content: "已经出院但未代收的病历",
+          title: "值班管理",
+          content: "值班管理",
           onclick: "unreceivedMedicalRecords"
         }
       ], [
         {
           style: "event-report",
-          title: "事件报表",
-          content: "根据护士的事件统计报表",
+          title: "超30天患者管理",
+          content: "住院时间超30天患者管理",
           onclick: "eventReport"
         }, {
           style: "medical-record-editor",
-          title: "病案编辑",
-          content: "单独编辑病案首页信息",
+          title: "再住院管理",
+          content: "再住院管理",
           onclick: "medicalRecordEditor"
         }
       ], [
         {
           style: "integrated-presentation-of-medical-records",
-          title: "病历一体化展现",
-          content: "整体浏览者的病历，并打印",
+          title: "危重患者管理",
+          content: "危重患者管理",
+          onclick: "integratedPresentationOfMedicalRecords"
+        },
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "抢救管理",
+          content: "抢救记录模块",
+          onclick: "integratedPresentationOfMedicalRecords"
+        }
+      ], [
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "规范操作管理",
+          content: "规范操作管理",
+          onclick: "integratedPresentationOfMedicalRecords"
+        },
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "手术授权管理",
+          content: "手术授权管理",
+          onclick: "integratedPresentationOfMedicalRecords"
+        }
+      ], [
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "手术分级管理",
+          content: "手术分级管理",
+          onclick: "integratedPresentationOfMedicalRecords"
+        },
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "规范手术管理",
+          content: "规范手术管理",
+          onclick: "integratedPresentationOfMedicalRecords"
+        }
+      ], [
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "评分统计",
+          content: "评分统计",
+          onclick: "integratedPresentationOfMedicalRecords"
+        },
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "诊断查询",
+          content: "诊断查询",
+          onclick: "integratedPresentationOfMedicalRecords"
+        }
+      ], [
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "超时查询",
+          content: "超时查询",
+          onclick: "integratedPresentationOfMedicalRecords"
+        },
+        {
+          style: "integrated-presentation-of-medical-records",
+          title: "病案首页统计",
+          content: "病案首页统计",
           onclick: "integratedPresentationOfMedicalRecords"
         }
       ]]
-    };
+    }
+        ;
   },
   methods: {
     linkToDataInput(methods) {

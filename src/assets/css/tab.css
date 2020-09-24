@@ -185,5 +185,105 @@
 
 .small-template-quality-control .grid-con-icon {
     background-image: url("../img/inpatient_medical_workstation/nursing-scheduling.png");
+}
 
+/*超时文档对比统计*/
+.timeout-document-comparison-statistics .grid-con-icon {
+    background-image: url("../img/report_statistics/timeout-document-comparison-statistics.png");
+}
+
+/*病历错误信息统计*/
+.medical-record-error-information-statistics .grid-con-icon {
+    background-image: url("../img/report_statistics/medical-record-document-statistics.png");
+}
+
+/*趋势分析*/
+.trend-analysis .grid-con-icon {
+    background-image: url("../img/report_statistics/trend-analysis.png");
+}
+
+/*超时文档趋势分析*/
+.timeout-document-trend-analysis .grid-con-icon {
+    background-image: url("../img/report_statistics/timeout-document-trend-analysis.png");
+}
+
+/*病历文档统计*/
+.medical-record-document-statistics .grid-con-icon {
+    background-image: url("../img/report_statistics/medical-record-document-statistics.png");
+}
+
+/*病历归档率统计*/
+.statistics-of-medical-record-filingRate .grid-con-icon {
+    background-image: url("../img/report_statistics/statistics-of-medical-record-filingRate.png");
+}
+
+/*自定义报表*/
+.custom-report .grid-con-icon {
+    background-image: url("../img/report_statistics/custom-report.png");
+}
+
+/*病历签字统计*/
+.medical-record-signature-statistics .grid-con-icon {
+    background-image: url("../img/report_statistics/medical-record-document-statistics.png");
+}
+
+/*病历未归档统计*/
+.statistics-of-unfilled-medical-records .grid-con-icon {
+    background-image: url("../img/report_statistics/statistics-of-unfilled-medical-records.png");
+}
+
+/*危急台账*/
+.critical-account .grid-con-icon {
+    background-image: url("../img/report_statistics/critical-account.png");
+}
+
+/*非计划性再次手术*/
+.unplanned-reoperation .grid-con-icon {
+    background-image: url("../img/report_statistics/unplanned-reoperation.png");
+}
+
+/*组织架构数据统计*/
+.organization-structure-data-statistics .grid-con-icon {
+    background-image: url("../img/report_statistics/organization-structure-data-statistics.png");
+}
+
+/*!*心脑发病登记统计*!*/
+/*.registration-statisticsa-of-heart-and-brain-diseases {*/
+/*background-image: url("../img/report_statistics/");*/
+/*}*/
+
+/*!*肿瘤报告统计*!*/
+/*.tumor-report-statistics {*/
+/*background-image: url("../img/report_statistics/");*/
+/*}*/
+
+
+/*组织架构图*/
+.organization-chart .grid-con-icon {
+    background-image: url("../img/system_maintenance/organization-chart.png");
+}
+
+/*用户管理*/
+.user-management .grid-con-icon {
+    background-image: url("../img/system_maintenance/user-management.png");
+}
+
+/*系统配置*/
+.system-configuration .grid-con-icon {
+    background-image: url("../img/system_maintenance/system-configuration.png");
+}
+
+/*患者信息维护*/
+.patient-information-maintenance .grid-con-icon {
+    background-image: url("../img/system_maintenance/patient-information-maintenance.png");
+}
+
+/*基础字典*/
+.basic-dictionary .grid-con-icon {
+    background-image: url("../img/system_maintenance/basic-dictionary.png");
+}
+
+/*接口配置*/
+.interface-configuration .grid-con-icon {
+    background-image: url("../img/system_maintenance/interface-configuration.png");
 }

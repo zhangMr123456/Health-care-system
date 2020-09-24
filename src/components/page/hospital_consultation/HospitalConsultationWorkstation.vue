@@ -16,7 +16,7 @@
       </el-col>
     </el-row>
 
-    <el-dialog v-dialogDrag title=dialogName center :visible.sync="visible" width="30%">
+    <el-dialog v-dialogDrag :title=dialogName center :visible.sync="visible" width="30%">
 
     </el-dialog>
   </div>

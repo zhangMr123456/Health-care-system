@@ -116,12 +116,12 @@ export default {
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/test3',
+          index: '/systemMaintenance',
           title: '系统维护'
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/test4',
+          index: '/medicalQualityManagementSystem',
           title: '医疗质量管理系统'
         },
         {

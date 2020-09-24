@@ -25,65 +25,46 @@
 import '@/assets/css/tab.css';
 
 export default {
-  name: 'medicalRecordLending',
+  name: 'systemMaintenance',
   data() {
     return {
       visible: false,
       dialogName: "拖拽弹框",
       items: [[
         {
-          style: "approve-medical-record-inquiry-application",
-          title: "批准病历查询申请",
-          content: "查询归档病历的申请进行批准",
-          onclick: "approveMedicalRecordInquiryApplication"
+          style: "organization-chart",
+          title: "组织架构图",
+          content: "分配科室人员",
+          onclick: "organizationChart"
         }, {
-          style: "grid-con-1",
-          title: "结构化检索",
-          content: "查询患者信息及病例内容",
-          onclick: "structuredRetrieval"
+          style: "user-management",
+          title: "用户管理",
+          content: "维护用户的基本信息",
+          onclick: "userManagement"
         }
       ], [
         {
-          style: "medical-record-browsing",
-          title: "病案浏览",
-          content: "浏览个科室病历",
-          onclick: "medicalRecordBrowsing"
+          style: "system-configuration",
+          title: "系统配置",
+          content: "配置系统运行的基本信息",
+          onclick: "systemConfiguration"
         }, {
-          style: "medical-record-collection",
-          title: "病历代收",
-          content: "对即将归档的病历代收集中提交",
-          onclick: "medicalRecordCollection"
+          style: "patient-information-maintenance",
+          title: "患者信息维护",
+          content: "维护患者基本信息",
+          onclick: "patientInformationMaintenance"
         }
       ], [
         {
-          style: "follow-up-of-medical-records",
-          title: "病案随访",
-          content: "对出院病人病案随访",
-          onclick: "followUpOfMedicalRecords"
+          style: "basic-dictionary",
+          title: "基础字典",
+          content: "系统中所需的各种基础信息",
+          onclick: "basicDictionary"
         }, {
-          style: "unreceived-medical-records",
-          title: "未收病历",
-          content: "已经出院但未代收的病历",
-          onclick: "unreceivedMedicalRecords"
-        }
-      ], [
-        {
-          style: "event-report",
-          title: "事件报表",
-          content: "根据护士的事件统计报表",
-          onclick: "eventReport"
-        }, {
-          style: "medical-record-editor",
-          title: "病案编辑",
-          content: "单独编辑病案首页信息",
-          onclick: "medicalRecordEditor"
-        }
-      ], [
-        {
-          style: "integrated-presentation-of-medical-records",
-          title: "病历一体化展现",
-          content: "整体浏览者的病历，并打印",
-          onclick: "integratedPresentationOfMedicalRecords"
+          style: "interface-configuration",
+          title: "接口配置",
+          content: "配置接口基本信息",
+          onclick: "interfaceConfiguration"
         }
       ]]
     };
