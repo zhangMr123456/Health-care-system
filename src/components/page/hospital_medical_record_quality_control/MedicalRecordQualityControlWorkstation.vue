@@ -21,21 +21,29 @@
         </div>
       </el-tab-pane>
     </el-tabs>
-    <el-dialog v-dialogDrag :title=dialogName center :visible.sync="visible" width="30%">
-
+    <el-dialog fullscreen :title=dialogName :visible.sync="visible" width="80%">
+      <component :is="current_window">
+      </component>
     </el-dialog>
   </div>
 </template>
 
 <script>
 import '@/assets/css/tab.css';
+import onlinePatientList from "@/components/page/inpatient_medical_workstation/child_pages/online_patient_list";
 
 export default {
   name: 'medicalRecordQualityControlWorkstation',
+  components:{
+    onlinePatientList,
+  },
   data() {
     return {
       visible: false,
       dialogName: "拖拽弹框",
+      currentComponent: "",
+      customer_id:'',
+      current_window: null,
       items: [{
         name: "环节质控",
         items:
@@ -132,9 +140,11 @@ export default {
     };
   },
   methods: {
-    linkToDataInput(methods) {
+    //根据方法名调用方法
+    linkToDataInput(title1, methods) {
+      this.dialogName = title1;
+      this.current_window = methods;
       this.visible = true;
-      // this.$options.methods[methods]();
     },
     handleRead(index) {
       const item = this.unread.splice(index, 1);

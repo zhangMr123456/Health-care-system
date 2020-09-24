@@ -15,9 +15,9 @@
       </el-col>
     </el-row>
 
-    <el-dialog fullscreen="true" :title=dialogName :visible.sync="visible" width="80%">
-		  <component :is="current_window">
-		  </component>
+    <el-dialog fullscreen :title=dialogName :visible.sync="visible" width="80%">
+      <component :is="current_window">
+      </component>
     </el-dialog>
   </div>
 
@@ -29,7 +29,7 @@ import onlinePatientList from './child_pages/online_patient_list.vue';
 
 export default {
   name: 'inpatientMedicalWorkstation',
-  components:{
+  components: {
     onlinePatientList,
   },
   data() {
@@ -37,7 +37,7 @@ export default {
       visible: false,
       dialogName: "拖拽弹框",
       currentComponent: "",
-      customer_id:'',
+      customer_id: '',
       current_window: null,
       items: [[
         {

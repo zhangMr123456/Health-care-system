@@ -16,21 +16,29 @@
       </el-col>
     </el-row>
 
-    <el-dialog v-dialogDrag :title=dialogName center :visible.sync="visible" width="30%">
-
+    <el-dialog fullscreen :title=dialogName :visible.sync="visible" width="80%">
+      <component :is="current_window">
+      </component>
     </el-dialog>
   </div>
 </template>
 
 <script>
 import '@/assets/css/tab.css';
+import onlinePatientList from "@/components/page/inpatient_medical_workstation/child_pages/online_patient_list";
 
 export default {
   name: 'hospitalConsultationWorkstation',
+  components:{
+    onlinePatientList,
+  },
   data() {
     return {
       visible: false,
       dialogName: "拖拽弹框",
+      currentComponent: "",
+      customer_id:'',
+      current_window: null,
       items: [[
         {
           style: "grid-con",
