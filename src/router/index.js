@@ -112,10 +112,10 @@ export default new Router({
                     meta: { title: '403' }
                 },
                 {
-                    path: '/donate',
+                    path: '/statistics-report',
                     component: () =>
-                        import ( /* webpackChunkName: "donate" */ '../components/page/Donate.vue'),
-                    meta: { title: '支持作者' }
+                        import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/statistics_report.vue'),
+                    meta: { title: '报表统计工作站' }
                 }
             ]
         },
