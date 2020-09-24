@@ -7,7 +7,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: '/dashboard'
+            redirect: '/MyPatients'
         },
         {
             path: '/',
@@ -15,11 +15,11 @@ export default new Router({
                 import ( /* webpackChunkName: "home" */ '../components/common/Home.vue'),
             meta: {title: '自述文件'},
             children: [{
-                    path: '/MyPatients',
-                    component: () =>
-                        import ( /* webpackChunkName: "dashboard" */ '../components/page/my_patients/MyPatients.vue'),
-                    meta: {title: '我的患者'}
-                },
+                path: '/MyPatients',
+                component: () =>
+                    import ( /* webpackChunkName: "dashboard" */ '../components/page/my_patients/MyPatients.vue'),
+                meta: {title: '我的患者'}
+            },
                 {
                     path: '/textdadadsc',
                     component: () =>
@@ -31,6 +31,32 @@ export default new Router({
                     component: () =>
                         import ( /* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
                     meta: {title: '自定义图标'}
+                },
+                {
+                    path: '/medicalAnesthesia',
+                    component: () =>
+                        import ( /* webpackChunkName: "icon" */ '../components/page/medical_anesthesia/MedicalAnesthesia.vue'),
+                    meta: {title: '医技麻醉工作站'}
+                },
+                {
+                    path: '/ClinicalPathway',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/clinical_pathway/ClinicalPathway.vue'),
+                    meta: {title: '临床路径'}
+                },
+                {
+                    path: '/ClinicalPathwaySetting',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/clinical_pathway_setting/ClinicalPathwaySetting.vue'),
+                    meta: {title: '临床路径设置'}
+                },
+                {
+                    path: '/TemplateMaintenance',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/template_maintenance/TemplateMaintenance.vue'),
+                    meta: {title: '模版维护'}
+                },
+                {
+                    path: '/MedicalDatabases',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/medical_database/MedicalDatabases.vue'),
+                    meta: {title: '医学资料库'}
                 },
                 {
                     path: '/MyItemList',
@@ -48,6 +74,7 @@ export default new Router({
                     component: () => import(/* webpackChunkName: "form" */ '../components/page/hospital_consultation/HospitalConsultationWorkstation.vue'),
                     meta: {title: '院内会诊工作站'}
                 },
+
                 {
                     // 富文本编辑器组件
                     path: '/editor',
@@ -121,12 +148,12 @@ export default new Router({
                         import ( /* webpackChunkName: "403" */ '../components/page/403.vue'),
                     meta: {title: '403'}
                 },
-                // {
-                //     path: '/statistics-report',
-                //     component: () =>
-                //         import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/ReportStatistics.vue'),
-                //     meta: {title: '报表统计工作站'}
-                // },
+                {
+                    path: '/reportStatistics',
+                    component: () =>
+                        import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/ReportStatistics.vue'),
+                    meta: {title: '报表统计工作站'}
+                },
                 {
                     path: '/statistics-report',
                     component: () =>

@@ -25,7 +25,7 @@
 import '@/assets/css/tab.css';
 
 export default {
-  name: 'medicalRecordLending',
+  name: 'reportStatistics',
   data() {
     return {
       visible: false,

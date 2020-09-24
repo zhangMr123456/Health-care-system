@@ -287,3 +287,141 @@
 .interface-configuration .grid-con-icon {
     background-image: url("../img/system_maintenance/interface-configuration.png");
 }
+
+
+/*.医技/麻醉工作站*/
+.medical-anesthesia .grid-con-icon {
+    background-image: url("../img/medical_anesthesia/medical-anesthesia.png");
+}
+
+/*.手术安排*/
+.surgical-arrangement .grid-con-icon {
+    background-image: url("../img/medical_anesthesia/surgical-arrangement.png");
+}
+
+
+/*查询统计*/
+.query-statistics .grid-con-icon {
+    background-image: url("../img/clinical_pathway/query-statistics.png");
+}
+
+/*出径*/
+.outgoing-diameter .grid-con-icon {
+    background-image: url("../img/clinical_pathway/outgoing-diameter.png");
+}
+
+/*导入路径*/
+.import-path .grid-con-icon {
+    background-image: url("../img/clinical_pathway/import-path.png");
+}
+
+/*护理记录*/
+.nursing-records .grid-con-icon {
+    background-image: url("../img/clinical_pathway/nursing-records.png");
+}
+
+/*路径评估*/
+.path-evaluation .grid-con-icon {
+    background-image: url("../img/clinical_pathway/path-evaluation.png");
+}
+
+/*路径完成*/
+.path-complete .grid-con-icon {
+    background-image: url("../img/clinical_pathway/path-complete.png");
+}
+
+/*生成每日医嘱*/
+.generate-daily-orders .grid-con-icon {
+    background-image: url("../img/clinical_pathway/generate-daily-orders.png");
+}
+
+/*医嘱查询及传送*/
+.medical-ddvice-inquiry-andTransmission .grid-con-icon {
+    background-image: url("../img/clinical_pathway/medical-ddvice-inquiry-andTransmission.png");
+}
+
+/*自定义查询*/
+.custom-query .grid-con-icon {
+    background-image: url("../img/clinical_pathway/custom-query.png");
+}
+
+/*大模版库*/
+.large-template-library .grid-con-icon {
+    background-image: url("../img/template_maintenance/large-template-library.png");
+}
+
+/*小模版库*/
+.small-template-library .grid-con-icon {
+    background-image: url("../img/template_maintenance/small-template-library.png");
+}
+
+/*简单元素库*/
+.simple-element-library .grid-con-icon {
+    background-image: url("../img/template_maintenance/simple-element-library.png");
+}
+
+/*页眉页脚设置*/
+.header-and-footer-settings .grid-con-icon {
+    background-image: url("../img/template_maintenance/header-and-footer-settings.png");
+}
+
+/*复杂元素库*/
+.complex-element-library .grid-con-icon {
+    background-image: url("../img/template_maintenance/complex-element-library.png");
+}
+
+/*段落提纲库*/
+.paragraph-outline-library .grid-con-icon {
+    background-image: url("../img/template_maintenance/paragraph-outline-library.png");
+}
+
+/*母版库*/
+.master-library .grid-con-icon {
+    background-image: url("../img/template_maintenance/master-library.png");
+}
+
+
+/*药品资料库*/
+.drug-database .grid-con-icon {
+    background-image: url("../img/medical_databases/drug-database.png");
+}
+
+/*常见疾病诊疗规范*/
+.diagnosis-and-treatment-standard-of-common-diseases .grid-con-icon {
+    background-image: url("../img/medical_databases/diagnosis-and-treatment-standard-of-common-diseases.png");
+}
+
+/*ICD-10国际编码库*/
+.international-Codebase .grid-con-icon {
+    background-image: url("../img/medical_databases/international-Codebase.png");
+}
+
+/*医学图片库*/
+.medical-pPicture-library .grid-con-icon {
+    background-image: url("../img/medical_databases/medical-pPicture-library.png");
+}
+
+/*医学适量图形库*/
+.medical-moderate-graphics-library .grid-con-icon {
+    background-image: url("../img/medical_databases/medical-moderate-graphics-library.png");
+}
+
+/*知识采集库*/
+.knowledge-collection-library .grid-con-icon {
+    background-image: url("../img/medical_databases/knowledge-collection-library.png");
+}
+
+/*手术库维护*/
+.maintenance-of-surgical-library .grid-con-icon {
+    background-image: url("../img/medical_databases/maintenance-of-surgical-library.png");
+}
+
+/*诊疗常规*/
+.routine-diagnosis-and-treatment .grid-con-icon {
+    background-image: url("../img/medical_databases/routine-diagnosis-and-treatment.png");
+}
+
+/*体温单选择录入*/
+.body-temperature-entry .grid-con-icon {
+    background-image: url("../img/medical_databases/body-temperature-entry.png");
+}

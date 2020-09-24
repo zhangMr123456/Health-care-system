@@ -71,32 +71,32 @@ export default {
         },
         {
           icon: 'el-icon-lx-copy',
-          index: 'inpatientMedicalWorkstation',
+          index: '/inpatientMedicalWorkstation',
           title: '住院医护工作站'
         },
         {
           icon: 'el-icon-lx-calendar',
-          index: 'hospitalConsultationWorkstation',
+          index: '/hospitalConsultationWorkstation',
           title: '院内会诊工作站'
         },
         {
           icon: 'el-icon-lx-emoji',
-          index: 'icon',
+          index: '/medicalAnesthesia',
           title: '医技麻醉工作站'
         },
         {
           icon: 'el-icon-pie-chart',
-          index: 'charts',
+          index: 'ClinicalPathway',
           title: '临床路径'
         },
         {
           icon: 'el-icon-rank',
-          index: '6',
+          index: 'ClinicalPathwaySetting',
           title: '临床路径设置'
         },
         {
           icon: 'el-icon-lx-global',
-          index: 'i18n',
+          index: 'TemplateMaintenance',
           title: '模板维护'
         },
         {
@@ -111,7 +111,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/test2',
+          index: '/MedicalDatabases',
           title: '医学资料库'
         },
         {
@@ -126,7 +126,7 @@ export default {
         },
         {
           icon: 'el-icon-lx-redpacket_fill',
-          index: '/statistics-report',
+          index: '/reportStatistics',
           title: '报表统计工作站'
         }
       ]
