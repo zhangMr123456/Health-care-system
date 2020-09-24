@@ -61,12 +61,12 @@ export default {
       items: [
         {
           icon: 'el-icon-lx-home',
-          index: 'dashboard',
+          index: 'MyPatients',
           title: '我的患者'
         },
         {
           icon: 'el-icon-lx-cascades',
-          index: 'table',
+          index: 'MyItemList',
           title: '我的代办事项'
         },
         {
