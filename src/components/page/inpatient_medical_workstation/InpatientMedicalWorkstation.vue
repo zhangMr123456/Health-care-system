@@ -1,11 +1,10 @@
 <template>
 
   <div class="inpatient-medical-workstation">
-    <!--    <div v-on:click="inpatient">test</div>-->
     <el-row :gutter="40" v-for="item in items">
       <el-col :span="7" v-for="cont in item">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.onclick)">
+          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
             <i class="grid-con-icon"></i>
             <div class="grid-cont-right">
               <div class="title grid-num ">{{ cont.title }}</div>
@@ -16,8 +15,9 @@
       </el-col>
     </el-row>
 
-    <el-dialog v-dialogDrag :title=dialogName center :visible.sync="visible" width="30%">
-
+    <el-dialog fullscreen="true" :title=dialogName :visible.sync="visible" width="80%">
+		  <component :is="current_window">
+		  </component>
     </el-dialog>
   </div>
 
@@ -25,24 +25,31 @@
 
 <script>
 import '@/assets/css/tab.css';
+import onlinePatientList from './child_pages/online_patient_list.vue';
 
 export default {
   name: 'inpatientMedicalWorkstation',
+  components:{
+    onlinePatientList,
+  },
   data() {
     return {
       visible: false,
       dialogName: "拖拽弹框",
+      currentComponent: "",
+      customer_id:'',
+      current_window: null,
       items: [[
         {
           style: "grid-con",
           title: "在院患者",
           content: "病例文书的书写、患者转科等操作",
-          onclick: "inpatient"
+          onclick: onlinePatientList
         }, {
           style: "grid-con-1",
           title: "结构化检索",
           content: "查询患者信息及病例内容",
-          onclick: "structuredRetrieval"
+          onclick: "jieGouHUa"
         }
       ], [{
         style: "grid-con-2",
@@ -111,7 +118,9 @@ export default {
   },
   methods: {
     //根据方法名调用方法
-    linkToDataInput(methods) {
+    linkToDataInput(title1, methods) {
+      this.dialogName = title1;
+      this.current_window = methods;
       this.visible = true;
     },
 

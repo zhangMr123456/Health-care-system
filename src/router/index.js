@@ -21,6 +21,12 @@ export default new Router({
                     meta: {title: '我的患者'}
                 },
                 {
+                    path: '/textdadadsc',
+                    component: () =>
+                        import ( /* webpackChunkName: "icon" */ '../components/page/inpatient_medical_workstation/child_pages/online_patient_list.vue'),
+                    meta: {title: '自定义图标'}
+                },
+                {
                     path: '/icon',
                     component: () =>
                         import ( /* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
@@ -121,6 +127,12 @@ export default new Router({
                 //         import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/ReportStatistics.vue'),
                 //     meta: {title: '报表统计工作站'}
                 // },
+                {
+                    path: '/statistics-report',
+                    component: () =>
+                        import ( /* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/statistics_report.vue'),
+                    meta: {title: '报表统计工作站'}
+                },
                 {
                     path: '/systemMaintenance',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/system_maintenance/SystemMaintenance.vue'),
