@@ -28,7 +28,7 @@ import onlinePatientList from "@/components/page/inpatient_medical_workstation/c
 
 export default {
   name: 'ClinicalPathwaySetting',
-  components:{
+  components: {
     onlinePatientList,
   },
   data() {
@@ -36,62 +36,67 @@ export default {
       visible: false,
       dialogName: "拖拽弹框",
       currentComponent: "",
-      customer_id:'',
+      customer_id: '',
       current_window: null,
       items: [[
         {
-          style: "query-statistics",
-          title: "查询统计",
-          content: "临床路径相关查询",
-          onclick: "queryStatistics"
+          style: "setting-of-complications-and-complications",
+          title: "合并症、并发症设置",
+          content: "设置合并症、并发症医嘱",
+          onclick: "settingOfComplicationsAndComplications"
         }, {
-          style: "outgoing-diameter",
-          title: "出径",
-          content: "因不再符合路径规定需要离开路径",
-          onclick: "outgoingDiameter"
+          style: "check-for-updates",
+          title: "检查更新",
+          content: "检查更新临床路径",
+          onclick: "checkForUpdates"
         }
       ], [
         {
-          style: "import-path",
-          title: "导入路径",
-          content: "将符合条件的住院人员导入临床",
-          onclick: "importPath"
+          style: "path-form-settings",
+          title: "路径表单设置",
+          content: "设置临床路径表单信息",
+          onclick: "pathFormSettings"
         }, {
-          style: "nursing-records",
-          title: "护理记录",
-          content: "填写加班护理情况",
-          onclick: "nursingRecords"
+          style: "path-classification",
+          title: "路径分类",
+          content: "设置临床路径分类",
+          onclick: "pathClassification"
         }
       ], [
         {
-          style: "path-evaluation",
-          title: "路径评估",
-          content: "对路径每日执行情况评估",
-          onclick: "pathEvaluation"
+          style: "path-basic-information",
+          title: "路径基本信息",
+          content: "设置临床路径基本信息",
+          onclick: "pathBasicInformation"
         }, {
-          style: "path-complete",
-          title: "路径完成",
-          content: "病人出院或路径转移",
-          onclick: "pathComplete"
+          style: "nursing-settings-in-path-stage",
+          title: "路径阶段护理设置",
+          content: "设置路径各阶段护理选项",
+          onclick: "nursingSettingsInPathStage"
         }
       ], [
         {
-          style: "generate-daily-orders",
-          title: "生成每日医嘱",
-          content: "根据路径阶段医嘱设置生成医嘱",
-          onclick: "generateDailyOrders"
+          style: "path-stage-evaluation-settings",
+          title: "路径阶段评估设置",
+          content: "设置路径各阶段评估指标",
+          onclick: "pathStageEvaluationSettings"
         }, {
-          style: "medical-ddvice-inquiry-andTransmission",
-          title: "医嘱查询及传送",
-          content: "查询医嘱执行情况传送路径医嘱",
-          onclick: "medicalDdviceInquiryAndTransmission"
+          style: "path-stage-doctor-advice-setting",
+          title: "路径阶段医嘱设置",
+          content: "设置个路径各阶段重点医嘱",
+          onclick: "pathStageDoctorAdviceSetting"
         }
       ], [
         {
-          style: "custom-query",
-          title: "自定义查询",
-          content: "路径相关自定义查询",
-          onclick: "customQuery"
+          style: "data-dictionary",
+          title: "数据字典",
+          content: "临床路径相关数据字典",
+          onclick: "dataDictionary"
+        }, {
+          style: "system-settings",
+          title: "系统设置",
+          content: "配置系统参数",
+          onclick: "systemSettings"
         }
       ]]
     };

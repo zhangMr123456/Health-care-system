@@ -28,7 +28,7 @@ import onlinePatientList from "@/components/page/inpatient_medical_workstation/c
 
 export default {
   name: 'medicalRecordLending',
-  components:{
+  components: {
     onlinePatientList,
   },
   data() {
@@ -36,7 +36,7 @@ export default {
       visible: false,
       dialogName: "拖拽弹框",
       currentComponent: "",
-      customer_id:'',
+      customer_id: '',
       current_window: null,
       items: [[
         {
@@ -88,68 +88,68 @@ export default {
         }
       ], [
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "management-of-critical-patients",
           title: "危重患者管理",
           content: "危重患者管理",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "managementOfCriticalPatients"
         },
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "rescue-management",
           title: "抢救管理",
           content: "抢救记录模块",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "rescueManagement"
         }
       ], [
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "standardize-operation-management",
           title: "规范操作管理",
           content: "规范操作管理",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "standardizeOperationManagement"
         },
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "operation-authorization-management",
           title: "手术授权管理",
           content: "手术授权管理",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "operationAuthorizationManagement"
         }
       ], [
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "operation-classification-management",
           title: "手术分级管理",
           content: "手术分级管理",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "operationClassificationManagement"
         },
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "standardize-operation-management",
           title: "规范手术管理",
           content: "规范手术管理",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "standardizeOperationManagement"
         }
       ], [
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "scoring-statistics",
           title: "评分统计",
           content: "评分统计",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "scoringStatistics"
         },
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "diagnostic-query",
           title: "诊断查询",
           content: "诊断查询",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "diagnosticQuery"
         }
       ], [
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "timeoutQuery",
           title: "超时查询",
           content: "超时查询",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "timeoutQuery"
         },
         {
-          style: "integrated-presentation-of-medical-records",
+          style: "first-page-statistics-of-medical-records",
           title: "病案首页统计",
           content: "病案首页统计",
-          onclick: "integratedPresentationOfMedicalRecords"
+          onclick: "firstPageStatisticsOfMedicalRecords"
         }
       ]]
     }

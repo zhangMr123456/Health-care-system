@@ -425,3 +425,152 @@
 .body-temperature-entry .grid-con-icon {
     background-image: url("../img/medical_databases/body-temperature-entry.png");
 }
+
+
+/*.合并症、并发症设置*/
+.setting-of-complications-and-complications .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/setting-of-complications-and-complications.png");
+}
+
+/*.检查更新*/
+.check-for-updates .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/check-for-updates.png");
+}
+
+/*.路径表单设置*/
+.path-form-settings .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/path-form-settings.png");
+}
+
+/*.路径分类*/
+.path-classification .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/path-classification.png");
+}
+
+/*.路径基本信息*/
+.path-basic-information .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/path-basic-information.png");
+}
+
+/*.路径阶段护理设置*/
+.nursing-settings-in-path-stage .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/nursing-settings-in-path-stage.png");
+}
+
+/*.路径阶段评估设置*/
+.path-stage-evaluation-settings .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/path-stage-evaluation-settings.png");
+}
+
+/*.路径阶段医嘱设置*/
+.path-stage-doctor-advice-setting .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/path-stage-doctor-advice-setting.png");
+}
+
+/*.数据字典*/
+.data-dictionary .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/data-dictionary.png");
+}
+
+/*.系统设置*/
+.system-settings .grid-con-icon {
+    background-image: url("../img/clinical_pathway_setting/system-settings.png");
+}
+
+
+/*.组织架构图*/
+.approve-medical-record-inquiry-application .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/组织架构图.png");
+}
+
+/*.非计划性再次手术*/
+.grid-con-1 .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/非计划性再次手术.png");
+
+}
+
+/*.交接班管理*/
+.medical-record-browsing .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/交接班管理.png");
+
+}
+
+/*.规范诊断管理*/
+.medical-record-collection .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/规范诊断管理.png");
+
+}
+
+/*.危机值管理*/
+.follow-up-of-medical-records .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/危急值管理.png");
+
+}
+
+/*.值班管理*/
+.unreceived-medical-records .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/值班管理.png");
+
+}
+
+/*.超30天患者管理*/
+.event-report .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/超30天患者管理.png");
+
+}
+
+/*.再住院管理*/
+.medical-record-editor .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/再住院管理.png");
+
+}
+
+/*.危重患者管理*/
+.management-of-critical-patients .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/危重患者管理.png");
+}
+
+/*.抢救管理*/
+.rescue-management .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/抢救管理.png");
+}
+
+/*.规范操作管理*/
+.standardize-operation-management .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/规范操作管理.png");
+}
+
+/*.手术授权管理*/
+.operation-authorization-management .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/手术授权管理.png");
+}
+
+/*.手术分级管理*/
+.operation-classification-management .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/手术分级管理.png");
+}
+
+/*.规范手术管理*/
+.standardize-operation-management .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/规范手术管理.png");
+}
+
+/*.评分统计*/
+.scoring-statistics .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/body-temperature-entry.png");
+}
+
+/*.诊断查询*/
+.diagnostic-query .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/body-temperature-entry.png");
+}
+
+/*.超时查询*/
+.timeoutQuery .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/body-temperature-entry.png");
+}
+
+/*.病案首页统计*/
+.first-page-statistics-of-medical-records .grid-con-icon {
+    background-image: url("../img/medical_quality_management_system/body-temperature-entry.png");
+}
