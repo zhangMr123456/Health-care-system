@@ -79,28 +79,28 @@ export default new Router({
                     // 国际化组件
                     path: '/i18n',
                     component: () => import(/* webpackChunkName: "i18n" */ '../components/page/I18n.vue'),
-                    meta: {title: '国际化'}
+                    meta: { title: '国际化' }
                 },
                 {
                     // 权限页面
                     path: '/permission',
                     component: () => import(/* webpackChunkName: "permission" */ '../components/page/Permission.vue'),
-                    meta: {title: '权限测试', permission: true}
+                    meta: { title: '权限测试', permission: true }
                 },
                 {
                     path: '/404',
                     component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),
-                    meta: {title: '404'}
+                    meta: { title: '404' }
                 },
                 {
                     path: '/403',
                     component: () => import(/* webpackChunkName: "403" */ '../components/page/403.vue'),
-                    meta: {title: '403'}
+                    meta: { title: '403' }
                 },
                 {
-                    path: '/donate',
-                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/Donate.vue'),
-                    meta: {title: '支持作者'}
+                    path: '/statistics-report',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/hospital_statistical_reports/statistics_report.vue'),
+                    meta: { title: '报表统计工作站' }
                 }
             ]
         },
