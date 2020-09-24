@@ -7,9 +7,7 @@ export default new Vuex.Store({
 	},
 	
 	getters:{
-		getOuterVisible: state =>{
-			return state.outerVisible 
-		},
+		
 	},
 	mutations:{
 		//只允许在这进行值的更改
