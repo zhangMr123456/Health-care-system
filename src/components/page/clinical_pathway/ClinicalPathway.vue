@@ -38,6 +38,7 @@ export default {
       currentComponent: "",
       customer_id: '',
       current_window: null,
+
       items: [[
         {
           style: "query-statistics",
