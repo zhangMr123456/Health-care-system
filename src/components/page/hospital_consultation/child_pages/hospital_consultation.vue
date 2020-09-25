@@ -3,7 +3,7 @@
     <template>
       <div>
         <el-button-group>
-          <el-button size="mini" v-for="item in toolbarItems" @click="linkToDataInput(item.click)"><i :class="item.icon"
+          <el-button size="mini" v-for="item in toolbarItems" @click="linkToDataInput(item.onclick)"><i :class="item.icon"
                                                                                                       v-if="item.icon"
                                                                                                       :style="item.color"></i>{{
               item.value
@@ -484,7 +484,7 @@ export default {
     this.tableData = this.firstTableData;
   },
   methods: {
-    linkToDataInput(method) {
+    linkToDataInput(title1,method) {
       this.$options.methods[method]();
     },
     quit: function () {

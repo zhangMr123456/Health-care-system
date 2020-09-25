@@ -8,7 +8,7 @@
           <el-row :gutter="40" v-for="rows in item.items">
             <el-col :span="7" v-for="card in rows">
               <el-card shadow="hover" :body-style="{padding: '0px'}">
-                <div class="grid-content" :class="card.style" v-on:click="linkToDataInput(card.onclick)">
+                <div class="grid-content" :class="card.style" v-on:click="linkToDataInput(card.title,card.onclick)">
                   <i class="grid-con-icon"></i>
                   <div class="grid-cont-right">
                     <div class="title grid-num ">{{ card.title }}</div>
@@ -34,7 +34,7 @@ import onlinePatientList from "@/components/page/inpatient_medical_workstation/c
 
 export default {
   name: 'medicalRecordQualityControlWorkstation',
-  components:{
+  components: {
     onlinePatientList,
   },
   data() {
@@ -42,7 +42,7 @@ export default {
       visible: false,
       dialogName: "拖拽弹框",
       currentComponent: "",
-      customer_id:'',
+      customer_id: '',
       current_window: null,
       items: [{
         name: "环节质控",

@@ -5,7 +5,7 @@
     <el-row :gutter="40" v-for="item in items">
       <el-col :span="7" v-for="cont in item">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.onclick)">
+          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title,cont.onclick)">
             <i class="grid-con-icon"></i>
             <div class="grid-cont-right">
               <div class="title grid-num ">{{ cont.title }}</div>
