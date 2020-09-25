@@ -5,7 +5,7 @@
     <el-row :gutter="40" v-for="item in items">
       <el-col :span="7" v-for="cont in item">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.onclick)">
+          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title,cont.onclick)">
             <i class="grid-con-icon"></i>
             <div class="grid-cont-right">
               <div class="title grid-num ">{{ cont.title }}</div>
@@ -22,40 +22,38 @@
     </el-dialog>
   </div>
 </template>
-
 <script>
 import '@/assets/css/tab.css';
-import onlinePatientList from "@/components/page/inpatient_medical_workstation/child_pages/online_patient_list";
+import hospital_consultation from "@/components/page/hospital_consultation/child_pages/hospital_consultation";
 
 export default {
   name: 'hospitalConsultationWorkstation',
-  components:{
-    onlinePatientList,
+  components: {
+    hospital_consultation,
   },
   data() {
     return {
       visible: false,
       dialogName: "拖拽弹框",
       currentComponent: "",
-      customer_id:'',
+      customer_id: '',
       current_window: null,
       items: [[
         {
           style: "grid-con",
           title: "院内会诊工作站",
           content: "院内会诊工作站",
-          onclick: "hospitalConsultation"
+          onclick: hospital_consultation
         },
       ]]
     };
   },
   methods: {
-    linkToDataInput(methods) {
+    //根据方法名调用方法
+    linkToDataInput(title1, methods) {
+      this.dialogName = title1;
+      this.current_window = methods;
       this.visible = true;
-    },
-    //院内会诊工作站
-    hospitalConsultation() {
-
     },
     handleRead(index) {
       const item = this.unread.splice(index, 1);
@@ -69,7 +67,11 @@ export default {
     handleRestore(index) {
       const item = this.recycle.splice(index, 1);
       this.read = item.concat(this.read);
+    },
+    changeVisible(data) {
+      this.visible = data;
     }
+
   },
   computed: {
     unreadNum() {
