@@ -103,6 +103,7 @@
 export default {
   data() {
     return {
+      //
       totalConsultations: 10,
       ordinary: 10,
       emergency: 10,
