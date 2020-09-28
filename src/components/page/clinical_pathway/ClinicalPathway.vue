@@ -2,8 +2,8 @@
 
   <div class="inpatient-medical-workstation">
     <!--    <div v-on:click="inpatient">test</div>-->
-    <el-row :gutter="40" v-for="item in items">
-      <el-col :span="7" v-for="cont in item">
+    <el-row :gutter="40" v-for="(item) in items" :key="item.content">
+      <el-col :span="7" v-for="(cont, index) in item" :key="index">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
           <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title,cont.onclick)">
             <i class="grid-con-icon"></i>
@@ -15,7 +15,7 @@
         </el-card>
       </el-col>
     </el-row>
-    <el-dialog v-dialog-drag :title=dialogName :visible.sync="visible" width="80%">
+    <el-dialog v-dialog-drag :title=dialogName :visible.sync="visible" width="80%" >
       <component :is="current_window">
       </component>
     </el-dialog>
@@ -25,11 +25,18 @@
 <script>
 import '@/assets/css/tab.css';
 import onlinePatientList from "@/components/page/inpatient_medical_workstation/child_pages/online_patient_list";
+import queryStatistics from "./query_statistics/QueryStatistics";
+import outgoingDiameter from "./path_out/PathOut";
+import importPath from "./import_path/ImportPath";
+
 
 export default {
   name: 'ClinicalPathway',
   components: {
     onlinePatientList,
+    queryStatistics,
+    outgoingDiameter,
+    importPath,
   },
   data() {
     return {

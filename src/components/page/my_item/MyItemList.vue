@@ -1,221 +1,287 @@
 <template>
-    <div class>
-        <div class="tabs">
-            <el-tabs type="border-card" v-model="activeName" @tab-click="handleClick">
-                <el-tab-pane label="质控消息" name="messagequality">
-                    <div id="messagequality">
-                        <div class="block" id="messagelist">
-                            <el-image class="imgwh"  :src="srcmesslist"></el-image>
-                            <div>
-                                <span class="tagging">消息列表</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="messagehandle">
-                            <el-image  class="imgwh" :src="srcmesshandle"></el-image>
-                            <div>
-                                <span class="tagging">消息处理</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="messagemedical">
-                            <el-image class="imgwh" :src="srcmedicaltrack"></el-image>
-                            <div>
-                                <span class="tagging">病历质量追踪</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                    </div>
-                </el-tab-pane>
+    <div class="tabs">
+        <el-tabs type="border-card" v-model="activeName" @tab-click="handleClick">
+            <el-tab-pane label="质控消息" name="messagequality">
+                <div class="myitem_messagequality">
+                    <el-row :gutter="40" v-for="item in itemsfirst" :key="item.content">
+                        <el-col :span="7" v-for="(cont, index) in item" :key="index">
+                            <el-card shadow="hover" :body-style="{ padding: '0px' }">
+                                <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
+                                    <i class="grid-con-icon"></i>
+                                    <div class="grid-cont-right">
+                                        <div class="title grid-num">{{ cont.title }}</div>
+                                        <div>{{ cont.content }}</div>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
 
-                <el-tab-pane label="待办事项" name="waittodo">
-                    <div id="waittodo">
-                        <div class="block" id="writedocument">
-                            <el-image class="imgwh" :src="srcwrite"></el-image>
-                            <div>
-                                <span class="tagging">急需书写文档</span>
-                                <span class="waitcount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="submitdocument">
-                            <el-image class="imgwh" :src="srcwait"></el-image>
-                            <div>
-                                <span class="tagging">待提交文档</span>
-                                <span class="waitcount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="signdocument">
-                            <el-image class="imgwh" :src="srcsign"></el-image>
-                            <div>
-                                <span class="tagging">待签字文档</span>
-                                <span class="waitcount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="mysigndocument">
-                            <el-image class="imgwh" :src="srcmysign"></el-image>
-                            <div>
-                                <span class="tagging">需要我签字文档</span>
-                                <span class="waitcount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="nursingtable">
-                            <el-image class="imgwh" :src="srcnurs"></el-image>
-                            <div>
-                                <span class="tagging">护理报表</span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="hospitalregister">
-                            <el-image class="imgwh" :src="srchosreg"></el-image>
-                            <div>
-                                <span class="tagging">出入院登记</span>
-                            </div>
-                        </div>
-                    </div>
-                </el-tab-pane>
 
-                <el-tab-pane label="即时消息" name="instantmessage">
-                    <div id="instantmessage">
-                        <div class="block" id="invitedconsultation">
-                            <el-image class="imgwh" :src="srcinvit"></el-image>
-                            <div>
-                                <span class="tagging">应邀会诊</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="applyconsultation">
-                            <el-image class="imgwh" :src="srcapplycon"></el-image>
-                            <div>
-                                <span class="tagging">会诊科室申请</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="waitinto">
-                            <el-image class="imgwh" :src="srcwaitinto"></el-image>
-                            <div>
-                                <span class="tagging">转科待转入</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="waitout">
-                            <el-image class="imgwh" :src="srcwaitout"></el-image>
-                            <div>
-                                <span class="tagging">转科待转出</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="submitedmedical">
-                            <el-image class="imgwh" :src="srcsubmedi"></el-image>
-                            <div>
-                                <span class="tagging">病历已提交</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="approvalmedicaladopt">
-                            <el-image class="imgwh" :src="srcapprovaladopt"></el-image>
-                            <div>
-                                <span class="tagging">病历已通过审批</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="approvalmedicalfailed">
-                            <el-image class="imgwh" :src="srcapprovalfail"></el-image>
-                            <div>
-                                <span class="tagging">病历未通过审批</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="rescueunconfirmed">
-                            <el-image class="imgwh" :src="srcrescue"></el-image>
-                            <div>
-                                <span class="tagging">抢救患者未确认</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="criticalunconfirmed">
-                            <el-image class="imgwh" :src="srccritical"></el-image>
-                            <div>
-                                <span class="tagging">危重患者未确认</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                    </div>
-                </el-tab-pane>
+                </div>
+            </el-tab-pane>
 
-                <el-tab-pane label="常用操作" name="commonoperations">
-                    <div id="commonoperations">
-                        <div class="block" id="entrustsign">
-                            <el-image class="imgwh" :src="srcentrust"></el-image>
-                            <div>
-                                <span class="tagging">委托签字</span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="changeshifts">
-                            <el-image class="imgwh" :src="srcchange"></el-image>
-                            <div>
-                                <span class="tagging">交接班</span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="30daysnotdischarged">
-                            <el-image class="imgwh" :src="src30"></el-image>
-                            <div>
-                                <span class="tagging">30天未出院患者</span>
-                                <span class="messagecount"></span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="telfollow">
-                            <el-image class="imgwh" :src="srctelfol"></el-image>
-                            <div>
-                                <span class="tagging">电话随访</span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="telfollowcensus">
-                            <el-image class="imgwh" :src="srctelfolcen"></el-image>
-                            <div>
-                                <span class="tagging">电话随访统计</span>
-                            </div>
-                        </div>
-                        <div class="block divmargin" id="outpatientmedical">
-                            <el-image class="imgwh" :src="srcoutmed"></el-image>
-                            <div>
-                                <span class="tagging">门诊病历</span>
-                            </div>
-                        </div>
-                    </div>
-                </el-tab-pane>
-            </el-tabs>
-        </div>
+            <el-tab-pane label="待办事项" name="waittodo">
+                <div class="myitem_waittodo">
+                    <el-row :gutter="40" v-for="item in itemssecond" :key="item.content">
+                        <el-col :span="7" v-for="(cont, index) in item" :key="index">
+                            <el-card shadow="hover" :body-style="{ padding: '0px' }">
+                                <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
+                                    <i class="grid-con-icon"></i>
+                                    <div class="grid-cont-right">
+                                        <div class="title grid-num">{{ cont.title }}</div>
+                                        <div>{{ cont.content }}</div>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+
+                </div>
+            </el-tab-pane>
+
+            <el-tab-pane label="即时消息" name="instantmessage">
+                <div class="myitem_instantmessage">
+                    <el-row :gutter="40" v-for="item in itemthird" :key="item.content">
+                        <el-col :span="7" v-for="(cont, index) in item" :key="index">
+                            <el-card shadow="hover" :body-style="{ padding: '0px' }">
+                                <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
+                                    <i class="grid-con-icon"></i>
+                                    <div class="grid-cont-right">
+                                        <div class="title grid-num">{{ cont.title }}</div>
+                                        <div>{{ cont.content }}</div>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+
+
+                </div>
+            </el-tab-pane>
+
+            <el-tab-pane label="常用操作" name="commonoperations">
+                <div class="myitem_commonoperations">
+                    <el-row :gutter="40" v-for="item in itemfourth" :key="item.content">
+                        <el-col :span="7" v-for="(cont, index) in item" :key="index">
+                            <el-card shadow="hover" :body-style="{ padding: '0px' }">
+                                <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
+                                    <i class="grid-con-icon"></i>
+                                    <div class="grid-cont-right">
+                                        <div class="title grid-num">{{ cont.title }}</div>
+                                        <div>{{ cont.content }}</div>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+
+                </div>
+            </el-tab-pane>
+        </el-tabs>
+        <el-dialog fullscreen :title="dialogName" :visible.sync="visible" width="80%">
+            <component :is="current_window"> </component>
+        </el-dialog>
     </div>
 </template>
 
 <script>
+import '@/assets/css/tab.css';
+
 export default {
     data() {
         return {
-            activeName: 'messagequality',
-            srcmesslist: require('../../../assets/img/my_item/待提交文档.png'),
-            srcmesshandle:require('../../../assets/img/my_item/质控已确认.png'),
-            srcmedicaltrack:require('../../../assets/img/my_item/护理排班.png'),
-            srcwrite:require('../../../assets/img/my_item/急需书写文档.png'),
-            srcwait: require('../../../assets/img/my_item/待提交文档.png'),
-            srcsign:require('../../../assets/img/my_item/待签字文档.png'), 
-            srcmysign:require('../../../assets/img/my_item/护理排班.png'), 
-            srcnurs:require('../../../assets/img/my_item/待提交文档.png'), 
-            srchosreg:require('../../../assets/img/my_item/病历已提交.png'), 
-            srcinvit:require('../../../assets/img/my_item/应邀会诊.png'), 
-            srcapplycon:require('../../../assets/img/my_item/会诊科室申请.png'), 
-            srcwaitinto:require('../../../assets/img/my_item/待转入患者.png'), 
-            srcwaitout:require('../../../assets/img/my_item/待转出患者.png'), 
-            srcsubmedi:require('../../../assets/img/my_item/病历已提交.png'), 
-            srcapprovaladopt:require('../../../assets/img/my_item/病历已通过审批.png'), 
-            srcapprovalfail:require('../../../assets/img/my_item/病历未通过审批.png'), 
-            srcrescue:require('../../../assets/img/my_item/护理排班.png'), 
-            srccritical:require('../../../assets/img/my_item/护理排班.png'), 
-            srcentrust:require('../../../assets/img/my_item/委托签字.png'), 
-            srcchange:require('../../../assets/img/my_item/交接班.png'), 
-            src30:require('../../../assets/img/my_item/30天未出院患者.png'), 
-            srctelfol:require('../../../assets/img/my_item/知识采集库.png'), 
-            srctelfolcen:require('../../../assets/img/my_item/知识采集库.png'), 
-            srcoutmed:require('../../../assets/img/my_item/护理排班.png')
+            visible: false,
+            dialogName: '拖拽弹框',
+            currentComponent: '',
+            customer_id: '',
+            current_window: null,
+            itemsfirst: [
+                [
+                    {
+                        style: 'myitem_messagelist',
+                        title: '消息列表',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_messagehandle',
+                        title: '消息处理',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_messagemedical',
+                        title: '病历质量追踪',
+                        content: '',
+                        onclick: ''
+                    }
+                ]
+            ],
+            itemssecond: [
+                [
+                    {
+                        style: 'myitem_writedocument',
+                        title: '急需书写文档',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_submitdocument',
+                        title: '待提交文档',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_signdocument',
+                        title: '待签字文档',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_mysigndocument',
+                        title: '需要我签字文档',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_nursingtable',
+                        title: '护理报表',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_hospitalregister',
+                        title: '出入院登记',
+                        content: '',
+                        onclick: ''
+                    }
+                ]
+            ],
+            itemthird: [
+                [
+                    {
+                        style: 'myitem_invitedconsultation',
+                        title: '应邀会诊',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_applyconsultation',
+                        title: '会诊科室申请',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_waitinto',
+                        title: '转科待转入',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_waitout',
+                        title: '待转科转出',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_submitedmedical',
+                        title: '病历已提交',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_approvalmedicaladopt',
+                        title: '病历已通过审批',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_approvalmedicalfailed',
+                        title: '病历未通过审批',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_rescueunconfirmed',
+                        title: '抢救患者未确认',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_criticalunconfirmed',
+                        title: '危重患者未确认',
+                        content: '',
+                        onclick: ''
+                    }
+                ]
+            ],
+            itemfourth: [
+                [
+                    {
+                        style: 'myitem_entrustsign',
+                        title: '委托签字',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_changeshifts',
+                        title: '交接班',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_30daysnotdischarged',
+                        title: '30天未出院患者',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_telfollow',
+                        title: '电话随访',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_telfollowcensus',
+                        title: '电话随访统计',
+                        content: '',
+                        onclick: ''
+                    },
+                    {
+                        style: 'myitem_outpatientmedical',
+                        title: '门诊病历',
+                        content: '',
+                        onclick: ''
+                    }
+                ]
+            ],
+
+            activeName: 'messagequality'
+            // srcmesslist: require('../../../assets/img/my_item/待提交文档.png'),
+            // srcmesshandle: require('../../../assets/img/my_item/质控已确认.png'),
+            // srcmedicaltrack: require('../../../assets/img/my_item/护理排班.png'),
+            // srcwrite: require('../../../assets/img/my_item/急需书写文档.png'),
+            // srcwait: require('../../../assets/img/my_item/待提交文档.png'),
+            // srcsign: require('../../../assets/img/my_item/待签字文档.png'),
+            // srcmysign: require('../../../assets/img/my_item/护理排班.png'),
+            // srcnurs: require('../../../assets/img/my_item/待提交文档.png'),
+            // srchosreg: require('../../../assets/img/my_item/病历已提交.png'),
+            // srcinvit: require('../../../assets/img/my_item/应邀会诊.png'),
+            // srcapplycon: require('../../../assets/img/my_item/会诊科室申请.png'),
+            // srcwaitinto: require('../../../assets/img/my_item/待转入患者.png'),
+            // srcwaitout: require('../../../assets/img/my_item/待转出患者.png'),
+            // srcsubmedi: require('../../../assets/img/my_item/病历已提交.png'),
+            // srcapprovaladopt: require('../../../assets/img/my_item/病历已通过审批.png'),
+            // srcapprovalfail: require('../../../assets/img/my_item/病历未通过审批.png'),
+            // srcrescue: require('../../../assets/img/my_item/护理排班.png'),
+            // srccritical: require('../../../assets/img/my_item/护理排班.png'),
+            // srcentrust: require('../../../assets/img/my_item/委托签字.png'),
+            // srcchange: require('../../../assets/img/my_item/交接班.png'),
+            // src30: require('../../../assets/img/my_item/30天未出院患者.png'),
+            // srctelfol: require('../../../assets/img/my_item/知识采集库.png'),
+            // srctelfolcen: require('../../../assets/img/my_item/知识采集库.png'),
+            // srcoutmed: require('../../../assets/img/my_item/护理排班.png')
         };
     },
     methods: {

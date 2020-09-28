@@ -13,7 +13,7 @@
         <el-radio v-model="radio" label="2">出院</el-radio>
         <el-radio v-model="radio" label="3">腕感</el-radio>
         <el-radio v-model="radio" label="4">进入路径</el-radio>
-        <el-radio v-model="radio" label="5">危机</el-radio>
+        <el-radio v-model="radio" label="5">危急</el-radio>
         <el-radio v-model="radio" label="6">入院3天内</el-radio>
         
         <el-button type="success">感染监测</el-button>

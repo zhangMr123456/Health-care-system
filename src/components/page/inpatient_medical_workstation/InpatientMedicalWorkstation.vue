@@ -1,8 +1,7 @@
 <template>
-
   <div class="inpatient-medical-workstation">
-    <el-row :gutter="40" v-for="item in items">
-      <el-col :span="7" v-for="cont in item">
+    <el-row :gutter="40" v-for="(item) in items" :key="item.content">
+      <el-col :span="7" v-for="(cont, index) in item" :key="index">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
           <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
             <i class="grid-con-icon"></i>
@@ -26,11 +25,16 @@
 <script>
 import '@/assets/css/tab.css';
 import onlinePatientList from './child_pages/online_patient_list.vue';
-
+import medicalRecordBorrowing from './medical_record/MedicalRecord';
+import patientsToBeTransferred from './wait_patients_in/WaitPatientsIn';
+import patientToBeTransferredOut from './wait_patients_out/WaitPatientsOut';
 export default {
   name: 'inpatientMedicalWorkstation',
   components: {
     onlinePatientList,
+    medicalRecordBorrowing,
+    patientsToBeTransferred,
+    patientToBeTransferredOut
   },
   data() {
     return {
@@ -39,12 +43,15 @@ export default {
       currentComponent: "",
       customer_id: '',
       current_window: null,
+      key:[
+
+      ],
       items: [[
         {
-          style: "grid-con",
+          style: "grid-con-0",
           title: "在院患者",
           content: "病例文书的书写、患者转科等操作",
-          onclick: onlinePatientList
+          onclick: "onlinePatientList"
         }, {
           style: "grid-con-1",
           title: "结构化检索",

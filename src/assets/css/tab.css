@@ -10,13 +10,17 @@
     background-position: center;
 }
 
+
 /*卡片标题*/
+
 .grid-num {
     font-size: 18px;
     font-weight: bold;
 }
 
+
 /*卡片整体*/
+
 .grid-cont-right {
     flex: 1;
     text-align: left;
@@ -24,12 +28,16 @@
     color: #999;
 }
 
+
 /*卡片背景颜色*/
+
 .inpatient-medical-workstation .el-card {
     background-color: rgba(255, 255, 255, 0);
 }
 
+
 /*卡片*/
+
 .grid-content {
     display: flex;
     align-items: center;
@@ -573,4 +581,103 @@
 /*.病案首页统计*/
 .first-page-statistics-of-medical-records .grid-con-icon {
     background-image: url("../img/medical_quality_management_system/body-temperature-entry.png");
+}
+
+
+/* 我的待办事项 */
+
+.myitem_messagelist .grid-con-icon {
+    background-image: url("../img/my_item/待提交文档.png");
+}
+
+.myitem_messagehandle .grid-con-icon {
+    background-image: url("../img/my_item/质控已确认.png");
+}
+
+.myitem_messagemedical .grid-con-icon {
+    background-image: url("../img/my_item/护理排班.png");
+}
+
+.myitem_writedocument .grid-con-icon {
+    background-image: url("../img/my_item/急需书写文档.png");
+}
+
+.myitem_submitdocument .grid-con-icon {
+    background-image: url("../img/my_item/待提交文档.png");
+}
+
+.myitem_signdocument .grid-con-icon {
+    background-image: url("../img/my_item/待签字文档.png");
+}
+
+.myitem_mysigndocument .grid-con-icon {
+    background-image: url("../img/my_item/护理排班.png");
+}
+
+.myitem_nursingtable .grid-con-icon {
+    background-image: url("../img/my_item/待提交文档.png");
+}
+
+.myitem_hospitalregister .grid-con-icon {
+    background-image: url("../img/my_item/病历已提交.png");
+}
+
+.myitem_invitedconsultation .grid-con-icon {
+    background-image: url("../img/my_item/应邀会诊.png");
+}
+
+.myitem_applyconsultation .grid-con-icon {
+    background-image: url("../img/my_item/会诊科室申请.png");
+}
+
+.myitem_waitinto .grid-con-icon {
+    background-image: url("../img/my_item/待转入患者.png");
+}
+
+.myitem_waitout .grid-con-icon {
+    background-image: url("../img/my_item/待转出患者.png");
+}
+
+.myitem_submitedmedical .grid-con-icon {
+    background-image: url("../img/my_item/病历已提交.png");
+}
+
+.myitem_approvalmedicaladopt .grid-con-icon {
+    background-image: url("../img/my_item/病历已通过审批.png");
+}
+
+.myitem_approvalmedicalfailed .grid-con-icon {
+    background-image: url("../img/my_item/病历未通过审批.png");
+}
+
+.myitem_rescueunconfirmed .grid-con-icon {
+    background-image: url("../img/my_item/护理排班.png");
+}
+
+.myitem_criticalunconfirmed .grid-con-icon {
+    background-image: url("../img/my_item/护理排班.png");
+}
+
+.myitem_entrustsign .grid-con-icon {
+    background-image: url("../img/my_item/委托签字.png");
+}
+
+.myitem_changeshifts .grid-con-icon {
+    background-image: url("../img/my_item/交接班.png");
+}
+
+.myitem_30daysnotdischarged .grid-con-icon {
+    background-image: url("../img/my_item/30天未出院患者.png");
+}
+
+.myitem_telfollow .grid-con-icon {
+    background-image: url("../img/my_item/知识采集库.png");
+}
+
+.myitem_telfollowcensus .grid-con-icon {
+    background-image: url("../img/my_item/知识采集库.png");
+}
+
+.myitem_outpatientmedical .grid-con-icon {
+    background-image: url("../img/my_item/护理排班.png");
 }

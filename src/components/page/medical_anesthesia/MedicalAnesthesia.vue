@@ -2,10 +2,10 @@
 
   <div class="inpatient-medical-workstation">
     <!--    <div v-on:click="inpatient">test</div>-->
-    <el-row :gutter="40" v-for="item in items">
-      <el-col :span="7" v-for="cont in item">
+    <el-row :gutter="40" v-for="(item) in items" :key="item.content">
+      <el-col :span="7" v-for="(cont, index) in item" :key="index">
         <el-card shadow="hover" :body-style="{padding: '0px'}">
-          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title,cont.onclick)">
+          <div class="grid-content" :class="cont.style" v-on:click="linkToDataInput(cont.title, cont.onclick)">
             <i class="grid-con-icon"></i>
             <div class="grid-cont-right">
               <div class="title grid-num ">{{ cont.title }}</div>
@@ -25,11 +25,13 @@
 <script>
 import '@/assets/css/tab.css';
 import onlinePatientList from "@/components/page/inpatient_medical_workstation/child_pages/online_patient_list";
+import operationarrangement from './operation_arrangement/OperationArrangement.vue';
 
 export default {
   name: 'medicalAnesthesia',
   components: {
     onlinePatientList,
+    operationarrangement
   },
   data() {
     return {
@@ -48,7 +50,7 @@ export default {
           style: "surgical-arrangement",
           title: "手术安排",
           content: "各科室之间的手术安排情况",
-          onclick: "surgicalArrangement"
+          onclick: operationarrangement
         }
       ]]
     };
@@ -72,6 +74,9 @@ export default {
     handleRestore(index) {
       const item = this.recycle.splice(index, 1);
       this.read = item.concat(this.read);
+    },
+    operationarrangement(){
+
     }
   },
   computed: {
